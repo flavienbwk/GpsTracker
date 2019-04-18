@@ -2,7 +2,7 @@ This project was built with *android studio* and works fine with both servers. T
 
 This version is the same as the current version in the Google Play store.
 
-https://play.google.com/store/apps/details?id=com.websmithing.gpstracker
+https://play.google.com/store/apps/details?id=com.berwick.gpstracker
 
 for testing check your location with your browser here: 
  
