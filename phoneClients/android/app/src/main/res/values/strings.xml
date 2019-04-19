@@ -4,7 +4,7 @@
     <string name="app_custom_name">Flavien B. version</string>
     <string name="default_upload_website">https://dashboard.berwick.fr/updatelocation.php</string>
 
-    <string name="query_sending">Sending location data to website...</string>
+    <string name="query_sending"></string>
     <string name="location_permission">Go into settings and find Gps Tracker app and enable Location.</string>
     <string name="tracking_is_off">Tracking is Off</string>
     <string name="tracking_is_on">Tracking is On</string>
@@ -15,7 +15,8 @@
     <string name="location_unavailable">Please go into Settings > Apps and enable Location.</string>
     <string name="user_name">user name</string>
     <string name="upload_website">upload website</string>
-    <string name="upload_frequency">Update website every:</string>
+    <string name="upload_frequency">Update website every :</string>
+    <string name="pending_queries">Pending queries :</string>
     <string name="one_minute">1 minute</string>
     <string name="two_minutes">2 minutes</string>
     <string name="three_minutes">3 minutes</string>

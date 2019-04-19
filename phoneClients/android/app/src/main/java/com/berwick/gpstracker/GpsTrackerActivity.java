@@ -15,7 +15,9 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import android.Manifest;
 import android.support.v4.app.ActivityCompat;
@@ -87,9 +89,11 @@ public class GpsTrackerActivity extends AppCompatActivity {
         intent.setAction(LocationService.ACTION_START_FOREGROUND_SERVICE);
         startService(intent);
 
+        /*
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+        */
 
         defaultUploadWebsite = getString(R.string.default_upload_website);
 
@@ -252,6 +256,12 @@ public class GpsTrackerActivity extends AppCompatActivity {
 
         if (locationsList == null) {
             locationsList = new ArrayList<Location>();
+        } else {
+            /*
+            SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), aList, R.layout.activity_gps_tracker, from, to);
+            ListView androidListView = (ListView) findViewById(R.id.list_view);
+            androidListView.setAdapter(simpleAdapter);
+            */
         }
         return true;
     }

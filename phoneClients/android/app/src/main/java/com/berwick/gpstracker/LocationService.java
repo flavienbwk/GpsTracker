@@ -56,15 +56,10 @@ public class LocationService extends Service implements
         LocationListener {
 
     private static final String TAG = "LocationService";
-
     private static final String TAG_FOREGROUND_SERVICE = "FOREGROUND_SERVICE";
-
     public static final String ACTION_START_FOREGROUND_SERVICE = "ACTION_START_FOREGROUND_SERVICE";
-
     public static final String ACTION_STOP_FOREGROUND_SERVICE = "ACTION_STOP_FOREGROUND_SERVICE";
-
     public static final String ACTION_PAUSE = "ACTION_PAUSE";
-
     public static final String ACTION_PLAY = "ACTION_PLAY";
 
     private String defaultUploadWebsite;
@@ -201,7 +196,7 @@ public class LocationService extends Service implements
         Date date = new Date(location.getTime());
 
         // Informing the user
-        Log.e(TAG_FOREGROUND_SERVICE, "[" + date + "] " + getString(R.string.query_sending));
+        Log.i(TAG_FOREGROUND_SERVICE, "[" + date + "] " + getString(R.string.query_sending));
         Toast.makeText(this, "[" + date + "] " + getString(R.string.query_sending), Toast.LENGTH_LONG).show();
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("com.berwick.gpstracker.prefs", Context.MODE_PRIVATE);
@@ -297,8 +292,9 @@ public class LocationService extends Service implements
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
-            Log.e(TAG, "position: " + location.getLatitude() + ", " + location.getLongitude() + " accuracy: " + location.getAccuracy());
+            Log.i(TAG, "position: " + location.getLatitude() + ", " + location.getLongitude() + " accuracy: " + location.getAccuracy());
             SharedPreferences sharedPreferences = this.getSharedPreferences("com.berwick.gpstracker.prefs", Context.MODE_PRIVATE);
+            Log.i(TAG, "intervalInMinutes : " + sharedPreferences.getInt("intervalInMinutes", -1) + " minutes.");
 
             // we have our desired accuracy of 500 meters so lets quit this service,
             // onDestroy will be called and stop our location updates

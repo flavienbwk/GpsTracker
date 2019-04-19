@@ -19,7 +19,8 @@ public class LoopjHttpClient {
 
     public static void debugLoopJ(String TAG, String methodName,String url, RequestParams requestParams, byte[] response, cz.msebera.android.httpclient.Header[] headers, int statusCode, Throwable t) {
 
-        Log.d(TAG, client.getUrlWithQueryString(false, url, requestParams));
+        //Log.d(TAG, client.getUrlWithQueryString(false, url, requestParams));
+        Log.d(TAG, url);
 
         if (headers != null) {
             Log.e(TAG, methodName);
